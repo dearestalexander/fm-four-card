@@ -220,7 +220,7 @@ footer {
 ================*/
 
 .pokemon {
-  background-image: url(/Users/alexanderroan/MyFiles/Tech/front_ment/four-card//images/pokemon/container_bg.png);
+  background-image: url(images/pokemon/container_bg.png);
   font-family: "Noto Sans", sans-serif;
   font-size: 0.9375rem;
   color: #313131;
