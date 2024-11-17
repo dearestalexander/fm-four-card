@@ -1,6 +1,24 @@
 /*=================
 ---- VARIABLES ----
 =================*/
+/* Test sizes: Mobile: 375px, Desktop: 1440px */
+
+:root {
+--colour-primary-red: hsl(0, 78%, 62%); /* EA5454 */
+--colour-primary-cyan: hsl(180, 62%, 55%); /* 44D3D2 */
+--colour-primary-orange: hsl(34, 97%, 64%); /* FCAE4A */
+--colour-primary-blue: hsl(212, 86%, 64%); /* 549EF2 */
+
+--colour-neutral-verydarkblue: hsl(234, 12%, 34%); /* 4D4F62 */
+--colour-neutral-grayishblue: hsl(229, 6%, 66%); /* */
+--colour-neutral-very-light-gray: hsl(0, 0%, 98%); /* FAFAFA */
+
+--body-font-size: 0.9275rem; /* 15px; */
+--ai-tools--font: "Poppins", sans-serif;
+--body-font-extralight: 200;
+--body-font-regular: 400;
+--body-font-semibold: 600;
+}
 
 /*=============
 ---- RESET ----
@@ -67,20 +85,270 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-/*==============
----- GLOBAL ----
-==============*/
+/*================
+---- TEMPLATE ----
+================*/
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.article__four-card {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article__four-card h1, .article--four-card p {
+  max-width: 33.75rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 21.875rem);
+  grid-template-rows: 15.625rem 15.625rem;
+  gap: 1.875rem;
+}
+
+.card {
+  width: 21.875rem;
+  height: 15.625rem;
+}
+
+.article__card__supervisor {
+grid-row: 1 / 3;
+justify-self: center;
+align-self: center;
+}
+
+.article__card__karma {
+ grid-column: 2 / 3;
+}
+
+.article__card__calculator {
+  grid-column: 3 / -1;
+  grid-row: 1 / 3;
+  justify-self: center;
+  align-self: center;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/*===============
+---- AI-TOOLS ----
+================*/
+
+.ai-tools {
+  font-family: var(--ai-tools--font);
+  color: var(--colour-neutral-verydarkblue);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-regular);
+}
+
+.ai-tools__heading-line-one {
+  margin-top: 5rem;
+  font-weight: 200; /* extra light */
+  font-size: 2.25rem;
+  letter-spacing: 0.0156em;
+  line-height: 3.375rem;
+  text-align: center;
+}
+
+.ai-tools__heading-line-two {
+  font-weight: 600; /* semibold */
+  text-align: center;
+}
+
+.ai-tools__body-text {
+  line-height: 1.5625rem;
+  letter-spacing: 0.00625em;
+  max-width: 33.75rem;
+  text-align: center;
+}
+
+.ai-tools__cards {
+  margin-top: 4rem;
+}
+
+.ai-tools__cards > article {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
+}
+
+.ai-tools__cards h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+}
+
+.ai-tools__cards p {
+  font-size: 0.8125rem;
+}
+
+.ai-tools__cards img {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.article__card__supervisor {
+  border-top: 4px solid var(--colour-primary-cyan);
+}
+
+.article__card__teambuilder {
+  border-top: 4px solid var(--colour-primary-red);
+}
+
+.article__card__karma {
+  border-top: 4px solid var(--colour-primary-orange);
+}
+
+.article__card__calculator {
+  border-top: 4px solid var(--colour-primary-blue);
+}
 
 
-/*===========================
----- INDIVIDUAL ELEMENTS ----
-===========================*/
+/*===============
+---- POKEMON ----
+================*/
 
+.pokemon {
+  background-image: url(/Users/alexanderroan/MyFiles/Tech/front_ment/four-card//images/pokemon/container_bg.png);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #313131;
+}
 
+.logo--pokemon {
+  width: 25rem;
+}
+
+.cards--pokemon {
+  margin-top: 1rem;
+}
+
+.card--pokemon {
+  display: flex;
+  border-radius: 1rem;
+  background-color: #F2F2F2;
+  border: none;
+  padding: 0.5rem;
+}
+
+.card--pokemon img {
+  width:90%;
+  object-fit:contain;
+}
+
+.card--pokemon div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #fff;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.card--pokemon p, .card--pokemon ul {
+  padding: 0.2rem;
+}
+
+.card--pokemon ul {
+  list-style-type: none;
+  font-size: 0.875rem;
+}
+
+.card--pokemon h1 {
+  width: 100%;
+  background-color: #313131;
+  color: white;
+  border-top-right-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.pokemon__types-list {
+  margin-top: auto;
+}
+
+.pokemon__types {
+  display: inline-block;
+  margin: 0.2rem 0.2rem;
+  padding: 0rem 0.2rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+
+.pokemon__colour-normal {
+  background-color: rgb(164, 172, 175);
+}
+.pokemon__colour-yellow {
+  background-color: rgb(238, 213, 53);
+}
+.pokemon__colour-fire {
+  background-color: rgb(253, 125, 36);
+}
+.pokemon__colour-water {
+  background-color: rgb(69, 146, 196);
+}
+.pokemon__colour-flying {
+  background: linear-gradient(
+    180deg,
+    #3dc7ef 50%,
+    #bdb9b8 50%
+  )
+}
 
 /*==============
 ---- FOOTER ----
 ===============*/
 
-  .attribution { font-size: 11px; text-align: center; }
-  .attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 0.875rem; max-width: 80%; margin:auto; text-align:center; margin-top: 2rem;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/*==============
+---- MOBILE ----
+===============*/
+@media (max-width: 75rem) {
+
+  /* template mobile */
+  .cards {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: min(19.4375rem, 90%);
+    height: 20.125rem;
+    align-self: center;
+    justify-self: center;
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  /* ai-tools mobile */
+  .ai-tools__heading-line-one {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .ai-tools__body-text {
+    max-width: 19.4375rem;
+    margin-top: 1rem;
+  }
+
+  /* pokemon mobile */
+  .card--pokemon {
+    height: 100%;
+  }
+
+  .card--pokemon img {
+    width: 9.375rem;
+  }
+}
