@@ -240,6 +240,7 @@ footer {
   background-color: #F2F2F2;
   border: none;
   padding: 0.5rem;
+  border: 5px solid #3d84c2;
 }
 
 .card--pokemon img {
@@ -257,12 +258,13 @@ footer {
 }
 
 .card--pokemon p, .card--pokemon ul {
-  padding: 0.2rem;
+  padding: 0.4rem;
 }
 
 .card--pokemon ul {
-  list-style-type: none;
-  font-size: 0.875rem;
+  list-style-type: square;
+  font-size: 0.8rem;
+  margin-left: 1em;
 }
 
 .card--pokemon h1 {
@@ -273,14 +275,16 @@ footer {
   padding: 0.5rem;
 }
 
-.pokemon__types-list {
+.card--pokemon .pokemon__types-list {
+  list-style-type: none;
   margin-top: auto;
+  margin-left: 0em;
 }
 
 .pokemon__types {
   display: inline-block;
-  margin: 0.2rem 0.2rem;
-  padding: 0rem 0.2rem;
+  margin: 0.2rem 0rem;
+  padding: 0 0.2rem;
   border-radius: 0.3rem;
   font-size: 1rem;
 }
