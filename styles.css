@@ -326,7 +326,6 @@ footer {
 
   .card {
     width: min(19.4375rem, 90%);
-    height: 20.125rem;
     align-self: center;
     justify-self: center;
     grid-column: 1 / -1;
